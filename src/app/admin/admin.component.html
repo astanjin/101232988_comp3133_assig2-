@@ -1,0 +1,50 @@
+
+<div class="container">
+    
+        <!-- <fieldset > -->
+            <legend>Add new Listing By Admin</legend>
+        <div class="mb-3">
+            <label for="listing_title" class="form-label">Listing Title</label>
+            <input type="text" class="form-control" #listing_title aria-describedby="titleHelp">
+            
+        </div>
+        <div class="mb-3">
+            <label for="listing_description" class="form-label">Description</label>
+            <input type="text" class="form-control" #listing_description>
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" #city aria-describedby="emailHelp">
+           
+        </div>
+        <div class="mb-3">
+            <label for="street" class="form-label">Street</label>
+            <input type="text" class="form-control" #street aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+            <label for="postal_code" class="form-label">Postal Code</label>
+            <input type="text" class="form-control" #postal_code aria-describedby="emailHelp">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" #price aria-describedby="emailHelp">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" #email aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Enter valid Email.</div>
+        </div>
+    
+        <button class= "btn btn-primary" type="submit" (click)="add(listing_title.value,listing_description.value,
+        city.value,street.value,postal_code.value,price.value,email.value
+        )">submit</button>
+        <!-- </fieldset> -->
+    
+</div>
+
+<!-- 
+ <input #q type="text" /><input  #b type=text/>
+ <button (click)="create(q.value,b.value)">submit</button> -->

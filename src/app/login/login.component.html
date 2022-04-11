@@ -1,0 +1,38 @@
+
+<div class="container">
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm" class="row g-3">
+        <legend>Login</legend>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input formControlName="username" type="text" class="form-control" required id="username">
+            <div  class="invalid-feedback"  *ngIf="!loginForm.controls['username'].valid">
+                Enter your username.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required aria-describedby="emailHelp">
+            <div class="invalid-feedback" *ngIf="!loginForm.controls['email'].valid">
+                Enter email.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback" *ngIf="!loginForm.controls['password'].valid">
+                password
+            </div>
+        </div>
+        
+    <button class="btn btn-primary" color="primary"  >Login</button>
+    </form>
+    
+    <br>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" color="primary" [routerLink]="['/register']">
+            Sign Up
+        </button>
+    </div>
+       
+    
+</div>
